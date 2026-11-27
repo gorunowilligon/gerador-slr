@@ -1,0 +1,68 @@
+# Linguagem RECEITA — programas escritos como receitas de cozinha.
+# Formato: ⟨Não terminal⟩ ::= corpo   (uma produção por linha; & = vazio)
+
+⟨programa⟩ ::= ⟨itens⟩
+⟨itens⟩ ::= ⟨itens⟩ ⟨item⟩
+⟨itens⟩ ::= ⟨item⟩
+⟨item⟩ ::= ⟨receita⟩
+⟨item⟩ ::= ⟨passo⟩
+
+# receita nome(param, ...) { passos }   — declaração de função
+⟨receita⟩ ::= receita id “(” ⟨params⟩ “)” ⟨bloco⟩
+⟨params⟩ ::= ⟨listaIds⟩
+⟨params⟩ ::= &
+⟨listaIds⟩ ::= ⟨listaIds⟩ “,” id
+⟨listaIds⟩ ::= id
+
+⟨bloco⟩ ::= “{” ⟨passos⟩ “}”
+⟨passos⟩ ::= ⟨passos⟩ ⟨passo⟩
+⟨passos⟩ ::= &
+
+# Passos (comandos)
+⟨passo⟩ ::= ingrediente id ⟨inicial⟩ “;”
+⟨inicial⟩ ::= “=” ⟨expr⟩
+⟨inicial⟩ ::= &
+⟨passo⟩ ::= id “=” ⟨expr⟩ “;”
+⟨passo⟩ ::= id “(” ⟨args⟩ “)” “;”
+⟨passo⟩ ::= prove id “;”
+⟨passo⟩ ::= anote ⟨expr⟩ “;”
+⟨passo⟩ ::= sirva ⟨expr⟩ “;”
+⟨passo⟩ ::= se “(” ⟨expr⟩ “)” ⟨bloco⟩ ⟨senao⟩
+⟨senao⟩ ::= senao ⟨bloco⟩
+⟨senao⟩ ::= &
+⟨passo⟩ ::= enquanto “(” ⟨expr⟩ “)” ⟨bloco⟩
+⟨passo⟩ ::= repita ⟨expr⟩ vezes ⟨bloco⟩
+
+# Expressões, da menor para a maior precedência
+⟨expr⟩ ::= ⟨expr⟩ ou ⟨conj⟩
+⟨expr⟩ ::= ⟨conj⟩
+⟨conj⟩ ::= ⟨conj⟩ e ⟨rel⟩
+⟨conj⟩ ::= ⟨rel⟩
+⟨rel⟩ ::= ⟨soma⟩ ⟨oprel⟩ ⟨soma⟩
+⟨rel⟩ ::= ⟨soma⟩
+⟨oprel⟩ ::= “==”
+⟨oprel⟩ ::= “!=”
+⟨oprel⟩ ::= “<”
+⟨oprel⟩ ::= “<=”
+⟨oprel⟩ ::= “>”
+⟨oprel⟩ ::= “>=”
+⟨soma⟩ ::= ⟨soma⟩ “+” ⟨termo⟩
+⟨soma⟩ ::= ⟨soma⟩ “-” ⟨termo⟩
+⟨soma⟩ ::= ⟨termo⟩
+⟨termo⟩ ::= ⟨termo⟩ “*” ⟨fator⟩
+⟨termo⟩ ::= ⟨termo⟩ “/” ⟨fator⟩
+⟨termo⟩ ::= ⟨termo⟩ “%” ⟨fator⟩
+⟨termo⟩ ::= ⟨fator⟩
+⟨fator⟩ ::= nao ⟨fator⟩
+⟨fator⟩ ::= “-” ⟨fator⟩
+⟨fator⟩ ::= “(” ⟨expr⟩ “)”
+⟨fator⟩ ::= id “(” ⟨args⟩ “)”
+⟨fator⟩ ::= id
+⟨fator⟩ ::= num
+⟨fator⟩ ::= texto
+⟨fator⟩ ::= verdadeiro
+⟨fator⟩ ::= falso
+⟨args⟩ ::= ⟨listaExpr⟩
+⟨args⟩ ::= &
+⟨listaExpr⟩ ::= ⟨listaExpr⟩ “,” ⟨expr⟩
+⟨listaExpr⟩ ::= ⟨expr⟩

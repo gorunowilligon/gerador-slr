@@ -1,0 +1,9 @@
+# Gramática 4.28 (sem recursão à esquerda, com &) — FIRST/FOLLOW do exemplo 4.30
+⟨E⟩  ::= ⟨T⟩ ⟨E'⟩
+⟨E'⟩ ::= “+” ⟨T⟩ ⟨E'⟩
+⟨E'⟩ ::= &
+⟨T⟩  ::= ⟨F⟩ ⟨T'⟩
+⟨T'⟩ ::= “*” ⟨F⟩ ⟨T'⟩
+⟨T'⟩ ::= &
+⟨F⟩  ::= “(” ⟨E⟩ “)”
+⟨F⟩  ::= id

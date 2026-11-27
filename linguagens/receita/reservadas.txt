@@ -1,0 +1,6 @@
+# Palavras reservadas da linguagem RECEITA (armazenadas a priori na TS)
+receita ingrediente
+se senao enquanto repita vezes
+prove anote sirva
+verdadeiro falso
+e ou nao

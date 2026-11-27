@@ -1,0 +1,12 @@
+# Declarações de variáveis no estilo C
+⟨Prog⟩  ::= ⟨Decls⟩
+⟨Decls⟩ ::= ⟨Decls⟩ ⟨Decl⟩
+⟨Decls⟩ ::= ⟨Decl⟩
+⟨Decl⟩  ::= ⟨Tipo⟩ ⟨Lista⟩ “;”
+⟨Tipo⟩  ::= int
+⟨Tipo⟩  ::= float
+⟨Tipo⟩  ::= char
+⟨Lista⟩ ::= ⟨Lista⟩ “,” ⟨Var⟩
+⟨Lista⟩ ::= ⟨Var⟩
+⟨Var⟩   ::= id
+⟨Var⟩   ::= id “[” num “]”

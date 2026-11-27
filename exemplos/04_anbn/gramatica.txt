@@ -1,0 +1,3 @@
+# a^n b^n, n >= 0 (linguagem livre de contexto, não regular)
+⟨S⟩ ::= a ⟨S⟩ b
+⟨S⟩ ::= &

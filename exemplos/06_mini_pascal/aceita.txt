@@ -1,0 +1,6 @@
+program id ;
+begin
+  id := num ;
+  while id < num do begin id := id + num ; end ;
+  if id < id then id := id else begin end
+end .

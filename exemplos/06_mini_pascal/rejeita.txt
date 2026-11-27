@@ -1,0 +1,2 @@
+# if sem else
+program id ; begin if id < num then id := num end .

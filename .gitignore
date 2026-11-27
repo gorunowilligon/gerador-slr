@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+build/
+tokens.txt
+*_ts.txt
+.vscode/
+.idea/

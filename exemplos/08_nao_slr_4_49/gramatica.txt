@@ -1,0 +1,7 @@
+# Gramática 4.49 do livro: NÃO é SLR(1) — conflito shift/reduce no estado 2 com "="
+# (é LR(1) canônica / LALR). Marque "resolver conflitos" para gerar mesmo assim.
+⟨S⟩ ::= ⟨L⟩ “=” ⟨R⟩
+⟨S⟩ ::= ⟨R⟩
+⟨L⟩ ::= “*” ⟨R⟩
+⟨L⟩ ::= id
+⟨R⟩ ::= ⟨L⟩

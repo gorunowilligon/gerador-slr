@@ -1,0 +1,11 @@
+# Definição léxica da linguagem RECEITA
+#   nome @ts:      vai para a tabela de símbolos  → ⟨id, linha⟩ / ⟨se, PR⟩
+#   nome @ignorar: reconhecido e descartado
+#   @literais:     símbolos especiais (o token é o próprio símbolo)
+
+espaco     @ignorar: [ \t\r\n]+
+comentario @ignorar: //[^\n]*
+id         @ts:      [A-Za-z_][A-Za-z0-9_]*
+num        @ts:      [0-9]+(\.[0-9]+)?
+texto      @ts:      "[^"\n]*"
+@literais: ( ) { } ; , = == != < <= > >= + - * / %

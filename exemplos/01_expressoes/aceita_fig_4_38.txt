@@ -1,0 +1,6 @@
+# id * id + id — os 14 movimentos da fig. 4.38
+⟨id, 1⟩
+⟨*⟩
+⟨id, 2⟩
+⟨+⟩
+⟨id, 3⟩

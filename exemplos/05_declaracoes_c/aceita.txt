@@ -1,0 +1,12 @@
+# int x, v[10];  float y;   (formato do léxico: TS com reservadas nas linhas 1-3)
+⟨int, PR⟩
+⟨id, 4⟩
+⟨,⟩
+⟨id, 5⟩
+⟨[⟩
+⟨num, 6⟩
+⟨]⟩
+⟨;⟩
+⟨float, PR⟩
+⟨id, 7⟩
+⟨;⟩

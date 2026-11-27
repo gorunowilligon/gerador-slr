@@ -1,0 +1,6 @@
+# "Dangling else": ambígua, logo não é SLR. Resolvendo o conflito com shift,
+# o else se associa ao if mais próximo (como em C e Pascal).
+⟨S⟩ ::= if ⟨E⟩ then ⟨S⟩
+⟨S⟩ ::= if ⟨E⟩ then ⟨S⟩ else ⟨S⟩
+⟨S⟩ ::= outro
+⟨E⟩ ::= cond

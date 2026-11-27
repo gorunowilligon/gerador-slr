@@ -1,0 +1,16 @@
+# Mini Pascal
+⟨Prog⟩  ::= program id “;” ⟨Bloco⟩ “.”
+⟨Bloco⟩ ::= begin ⟨Cmds⟩ end
+⟨Cmds⟩  ::= ⟨Cmds⟩ “;” ⟨Cmd⟩
+⟨Cmds⟩  ::= ⟨Cmd⟩
+⟨Cmd⟩   ::= id “:=” ⟨Exp⟩
+⟨Cmd⟩   ::= while ⟨Exp⟩ do ⟨Cmd⟩
+⟨Cmd⟩   ::= if ⟨Exp⟩ then ⟨Cmd⟩ else ⟨Cmd⟩
+⟨Cmd⟩   ::= ⟨Bloco⟩
+⟨Cmd⟩   ::= &
+⟨Exp⟩   ::= ⟨Exp⟩ “+” ⟨Fat⟩
+⟨Exp⟩   ::= ⟨Exp⟩ “<” ⟨Fat⟩
+⟨Exp⟩   ::= ⟨Fat⟩
+⟨Fat⟩   ::= id
+⟨Fat⟩   ::= num
+⟨Fat⟩   ::= “(” ⟨Exp⟩ “)”

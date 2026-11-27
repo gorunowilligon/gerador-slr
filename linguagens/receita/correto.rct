@@ -1,0 +1,33 @@
+// Livro de receitas: fatorial, fibonacci e um bolo
+receita fatorial(n) {
+    ingrediente resultado = 1;
+    enquanto (n > 1) {
+        resultado = resultado * n;
+        n = n - 1;
+    }
+    sirva resultado;
+}
+
+receita fibonacci(n) {
+    se (n <= 1) { sirva n; }
+    sirva fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+receita bolo(ovos, farinha) {
+    ingrediente massa = 0;
+    repita ovos vezes {
+        massa = massa + farinha / 2;
+    }
+    se (massa >= 10 e nao (ovos == 0)) {
+        anote "bolo fofinho!";
+    } senao {
+        anote "faltou ingrediente...";
+    }
+    sirva massa;
+}
+
+ingrediente porcoes;
+prove porcoes;            // lê do teclado
+anote fatorial(porcoes);
+anote fibonacci(10);
+bolo(3, 2.5);

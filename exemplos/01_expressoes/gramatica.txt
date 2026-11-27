@@ -1,0 +1,7 @@
+# Gramática 4.1 do livro do Aho — a tabela gerada é a da fig. 4.37
+⟨E⟩ ::= ⟨E⟩ “+” ⟨T⟩
+⟨E⟩ ::= ⟨T⟩
+⟨T⟩ ::= ⟨T⟩ “*” ⟨F⟩
+⟨T⟩ ::= ⟨F⟩
+⟨F⟩ ::= “(” ⟨E⟩ “)”
+⟨F⟩ ::= id

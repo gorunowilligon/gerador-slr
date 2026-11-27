@@ -1,0 +1,7 @@
+# JSON
+⟨Valor⟩   ::= ⟨Objeto⟩ | ⟨Lista⟩ | texto | num | true | false | null
+⟨Objeto⟩  ::= “{” ⟨Membros⟩ “}” | “{” “}”
+⟨Membros⟩ ::= ⟨Membros⟩ “,” ⟨Par⟩ | ⟨Par⟩
+⟨Par⟩     ::= texto “:” ⟨Valor⟩
+⟨Lista⟩   ::= “[” ⟨Elems⟩ “]” | “[” “]”
+⟨Elems⟩   ::= ⟨Elems⟩ “,” ⟨Valor⟩ | ⟨Valor⟩

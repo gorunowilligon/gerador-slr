@@ -1,0 +1,2 @@
+# int x, ;   — vírgula sem variável
+⟨int, PR⟩ ⟨id, 4⟩ ⟨,⟩ ⟨;⟩

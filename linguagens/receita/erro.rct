@@ -1,0 +1,8 @@
+// Erro proposital: falta o ";" ao fim da linha 4
+receita media(a, b) {
+    ingrediente soma = a + b;
+    ingrediente metade = soma / 2
+    sirva metade;
+}
+
+anote media(4, 8);
